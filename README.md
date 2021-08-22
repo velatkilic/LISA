@@ -22,7 +22,8 @@ Option 2: (todo) This option is not working yet
 
     pip install lisa
     
-Basic usage
+Basic usage:
+
 Create a Lisa object with default options
 
     augm = lisa.Lisa()
@@ -49,3 +50,5 @@ Cite as
 [V. Kilic, D. Hegde, V. Sindagi, A.B. Cooper, M.A. Foster and V.M. Patel,
 "Lidar Light Scattering Augmentation (LISA): Physics-based Simulation of Adverse Weather Conditions for 3D Object Detection",
 arXiv:2107.07004, (2021).](https://arxiv.org/abs/2107.07004)
+
+For original paper code look [here](/python_old/)
