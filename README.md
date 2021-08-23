@@ -26,26 +26,35 @@ Option 2: Build from the source and install using pip:
     
 Basic usage:
 
-Create a Lisa object with default options
-
-    import pylisa
-    augm = pylisa.Lisa()
-
-or create a Lisa object with non default options
+Create a Lisa object
 
     lidar = pylisa.Lidar() # lidar object
     water = pylisa.Water() # material object
     rain  = pylisa.MarshallPalmerRain() # particle distribution model
     
     augm  = pylisa.Lisa(lidar, water, rain)
-    
+where
+
+- the lidar object provides information such as laser wavelength, min/max range, beam divergence etc 
+- the material object (in this case water) provides information about refractive index as a function of wavelength
+- the particle distribution model (in this case Marshall Pallmer rain model) provides information about droplet distribution as a function of rain rate
+
 Next feed point cloud data (2D array) to the augmentor
     
     # Point cloud format: x,y,z,reflectance
-    pc    = np.array([[1.0, 0., 0., 0.5]]) 
+    pc    = [[1.0, 0., 0., 0.5]] # this can also be a 2D numpy array (N,4)
     
-    # pcnew should be [0,0,0,0,0] since range = sqrt(1+0+0) = 1 is smaller than min lidar range
-    pcnew = augm.augment(pc) 
+    # New point cloud format: x_new, y_new, z_new, reflectance_new, label
+    # where label = 0 for lost point, label = 1 for randomly scattered point and label = 2 for noisy original points
+    pcnew = augm.augment(pc, 30) # for a rain rate of 30 mm/hr
+    pcnew = augm.augment(pc)     # or use this method to sample rain rates from an exponential distribution
+    
+For developers: Documentation for the c++ code can be generated using Doxygen.
+
+## Known issues/todo:
+
+- [ ] Using the default contructor for the Lisa object in Python restarts the kernel
+- [ ] Implement fog and snow models
 
 ## Reference
 Cite as 
