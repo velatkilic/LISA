@@ -56,7 +56,7 @@ public:
     }
 };
 
-PYBIND11_MODULE(lisa, m) {
+PYBIND11_MODULE(pylisa, m) {
 		
 	// wrap mini lisa
 	py::class_<MiniLisa>(m, "MiniLisa")

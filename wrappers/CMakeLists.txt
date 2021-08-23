@@ -1,4 +1,4 @@
 set(FILES 
 	"wrapper.cpp"
 )
-target_sources(lisa PRIVATE ${FILES})
+target_sources(pylisa PRIVATE ${FILES})

@@ -12,7 +12,7 @@ set(RELATIVE_PATH "include")
 # Add files
 if(FILES)
 	#if files is not empty:
-	target_sources(lisa PRIVATE ${FILES})
+	target_sources(pylisa PRIVATE ${FILES})
 	
 	# if we want to install files
 	# this will be installed to CMAKE_INSTALL_PREFIX/include

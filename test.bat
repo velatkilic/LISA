@@ -5,5 +5,5 @@ python tests/testMaterial.py
 python tests/testParticleDist.py
 python tests/testMiniLisa.py
 python tests/testLisa.py
-pip uninstall lisa -y
+pip uninstall pylisa -y
 pause

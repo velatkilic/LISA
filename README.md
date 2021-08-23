@@ -14,27 +14,30 @@ of the scan lines under adverse weather arising from reduced SNR (signal to nois
 ![Randomly scattered points near sensor and lost points](/images/fog_snow.png)
 
 # Using LISA
-Option 1: Build from the source and install using pip:
+Option 1: Install using pip
 
+    pip install pylisa
+
+Option 2: Build from the source and install using pip:
+
+    git clone --recursive https://github.com/velatkilic/LISA.git
+    cd LISA
     pip install .
-
-Option 2: (todo) This option is not working yet
-
-    pip install lisa
     
 Basic usage:
 
 Create a Lisa object with default options
 
-    augm = lisa.Lisa()
+    import pylisa
+    augm = pylisa.Lisa()
 
 or create a Lisa object with non default options
 
-    lidar = lisa.Lidar() # lidar object
-    water = lisa.Water() # material object
-    rain  = lisa.MarshallPalmerRain() # particle distribution model
+    lidar = pylisa.Lidar() # lidar object
+    water = pylisa.Water() # material object
+    rain  = pylisa.MarshallPalmerRain() # particle distribution model
     
-    augm  = lisa.Lisa(lidar, water, rain)
+    augm  = pylisa.Lisa(lidar, water, rain)
     
 Next feed point cloud data (2D array) to the augmentor
     

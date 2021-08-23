@@ -47,13 +47,17 @@ class CMakeBuild(build_ext):
             subprocess.check_call(['cmake', '--build', '.'] + build_args, cwd=build_dir)
 
 setup(
-    name='lisa',
+    name='pylisa',
     version='0.0.1',
     author='Velat Kilic',
     author_email='velatkilic@gmail.com',
     description='Lidar light scattering augmentation',
     long_description='',
-    ext_modules=[CMakeExtension('lisa')],
+    ext_modules=[CMakeExtension('pylisa')],
     cmdclass=dict(build_ext=CMakeBuild),
     zip_safe=False,
+    keywords=['lidar', 'augmentation', 'scattering', 'lidar augmentation'],
+    classifiers = [
+        "Development Status :: 2 - Pre-Alpha",
+    ],
 )
