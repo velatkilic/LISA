@@ -14,6 +14,9 @@ of the scan lines under adverse weather arising from reduced SNR (signal to nois
 ![Randomly scattered points near sensor and lost points](/images/fog_snow.png)
 
 # Using LISA
+
+For original paper code look [here](/python_old/) which has implementations for fog and snow as well. It is tested better than the current project but slower which is why we switched from a pure python implementation to C++ with python bindings.
+
 Option 1: Install using pip
 
     pip install pylisa
@@ -62,5 +65,3 @@ Cite as
 [V. Kilic, D. Hegde, V. Sindagi, A.B. Cooper, M.A. Foster and V.M. Patel,
 "Lidar Light Scattering Augmentation (LISA): Physics-based Simulation of Adverse Weather Conditions for 3D Object Detection",
 arXiv:2107.07004, (2021).](https://arxiv.org/abs/2107.07004)
-
-For original paper code look [here](/python_old/)
