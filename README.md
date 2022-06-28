@@ -17,11 +17,7 @@ of the scan lines under adverse weather arising from reduced SNR (signal to nois
 
 For original paper code look [here](/python_old/) which has implementations for fog and snow as well. It is tested better than the current project but slower which is why we switched from a pure python implementation to C++ with python bindings.
 
-Option 1: Install using pip
-
-    pip install pylisa
-
-Option 2: Build from the source and install using pip:
+Build from the source and install using pip:
 
     git clone --recursive https://github.com/velatkilic/LISA.git
     cd LISA
