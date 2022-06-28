@@ -52,7 +52,6 @@ For developers: Documentation for the c++ code can be generated using Doxygen.
 
 ## Known issues/todo:
 
-- [ ] Using the default contructor for the Lisa object in Python restarts the kernel
 - [ ] Implement fog and snow models
 
 ## Reference
