@@ -6,10 +6,12 @@
 class Lisa : public MiniLisa {
 	public:
 
+		/*
 		//! @brief Lisa default constructor
 		Lisa() : MiniLisa(), dst(0.05) { 
 			ref_r = pow(std::abs((nref - 1.0) / (nref + 1.0)), 2.0); 
 		}
+		*/
 
 		//! @brief Construct Lisa object with given parameters assuming minimum particle diameter of 50 um for the Monte Carlo part
 		//! @param lidar : Lidar object (i.e VLS_128 or user defined lidars)

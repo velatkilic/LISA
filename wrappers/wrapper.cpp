@@ -60,7 +60,7 @@ PYBIND11_MODULE(pylisa, m) {
 		
 	// wrap mini lisa
 	py::class_<MiniLisa>(m, "MiniLisa")
-	.def(py::init<>())
+	//.def(py::init<>())
 	.def(py::init<Lidar &, Material &, ParticleDist &>())
 	.def("augment",py::overload_cast<std::vector<std::vector<double>> &>(&MiniLisa::augment))
 	.def("augment",py::overload_cast<std::vector<std::vector<double>> &, double>(&MiniLisa::augment))
@@ -68,7 +68,7 @@ PYBIND11_MODULE(pylisa, m) {
 	
 	// wrap lisa
 	py::class_<Lisa, MiniLisa>(m, "Lisa")
-	.def(py::init<>())
+	// .def(py::init<>())
 	.def(py::init<Lidar &, Material &, ParticleDist &>())
 	.def("augment",py::overload_cast<std::vector<std::vector<double>> &>(&Lisa::augment))
 	.def("augment",py::overload_cast<std::vector<std::vector<double>> &, double>(&Lisa::augment));

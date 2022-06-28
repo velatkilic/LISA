@@ -12,8 +12,7 @@
 class MiniLisa : public Augmenter {
 public:
 	//! @brief MiniLisa default constructor
-	MiniLisa():MiniLisa(Lidar(), Water(), MarshallPalmerRain()) {}
-
+	// MiniLisa():MiniLisa(Lidar(), Water(), MarshallPalmerRain()) {}
 
 	//! @brief Construct Lisa object with given parameters
 	//! @param lidar : Lidar object (i.e VLS_128 or user defined lidars)
