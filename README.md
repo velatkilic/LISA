@@ -16,42 +16,11 @@ of the scan lines under adverse weather arising from reduced SNR (signal to nois
 # Using LISA
 
 For original paper code look [here](/python_old/) which has implementations for fog and snow as well. It is tested better than the current project but slower which is why we switched from a pure python implementation to C++ with python bindings.
-
-Build from the source and install using pip:
-
-    git clone --recursive https://github.com/velatkilic/LISA.git
-    cd LISA
-    pip install .
-    
-Basic usage:
-
-Create a Lisa object
-
-    lidar = pylisa.Lidar() # lidar object
-    water = pylisa.Water() # material object
-    rain  = pylisa.MarshallPalmerRain() # particle distribution model
-    
-    augm  = pylisa.Lisa(lidar, water, rain)
-where
-
-- the lidar object provides information such as laser wavelength, min/max range, beam divergence etc 
-- the material object (in this case water) provides information about refractive index as a function of wavelength
-- the particle distribution model (in this case Marshall Pallmer rain model) provides information about droplet distribution as a function of rain rate
-
-Next feed point cloud data (2D array) to the augmentor
-    
-    # Point cloud format: x,y,z,reflectance
-    pc    = [[1.0, 0., 0., 0.5]] # this can also be a 2D numpy array (N,4)
-    
-    # New point cloud format: x_new, y_new, z_new, reflectance_new, label
-    # where label = 0 for lost point, label = 1 for randomly scattered point and label = 2 for noisy original points
-    pcnew = augm.augment(pc, 30) # for a rain rate of 30 mm/hr
-    pcnew = augm.augment(pc)     # or use this method to sample rain rates from an exponential distribution
     
 For developers: Documentation for the c++ code can be generated using Doxygen.
 
 ## Known issues/todo:
-
+- [ ] Write unit tests for the c++ implementation
 - [ ] Implement fog and snow models
 
 ## Reference
