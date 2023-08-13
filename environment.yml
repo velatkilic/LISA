@@ -1,0 +1,5 @@
+name: lisa
+dependencies:
+  - numpy
+  - matplotlib
+  - scipy

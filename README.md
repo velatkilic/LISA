@@ -15,13 +15,7 @@ of the scan lines under adverse weather arising from reduced SNR (signal to nois
 
 # Using LISA
 
-For original paper code look [here](/python_old/) which has implementations for fog and snow as well. It is tested better than the current project but slower which is why we switched from a pure python implementation to C++ with python bindings.
-    
-For developers: Documentation for the c++ code can be generated using Doxygen.
-
-## Known issues/todo:
-- [ ] Write unit tests for the c++ implementation
-- [ ] Implement fog and snow models
+For original paper code look [here](/python_old/)
 
 ## Reference
 Cite as 
