@@ -1,5 +1,5 @@
 LDFLAGS := -lm
-CFLAGS := -std=c99 -Wall -Wextra -pedantic -fPIC -O2 #-g
+CFLAGS := -std=c99 -Wall -Wextra -pedantic -fPIC #-g
 
 ifeq ($(OS_OPTION), windows)
 	GXX := x86_64-w64-mingw32-gcc
