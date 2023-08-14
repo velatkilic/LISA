@@ -26,15 +26,7 @@ the program uses subroutine callbh written by Bohren et al:
 	absorption and scattering of light by small particles.
 **********************************************************************/
 
-#include <math.h>
-#include <stdio.h>
-#include <float.h>
-
-#define PI 		3.14159265
-
-typedef struct {
-  float       r, i;
-}           complex;
+#include "mie.h"
 
 complex
 Cform(float rl, float im)
@@ -135,7 +127,7 @@ BHMie(float *X,
       float *Qback,
       float *Ganiso)
 {
-  static complex cd[3000];
+  // static complex cd[3000];
   static complex cy;
   static complex can, cbn;
   static complex cxi;
@@ -148,20 +140,20 @@ BHMie(float *X,
   static float apsi0, apsi1;
   static int  j, n;
   static float p, t;
-  static float theta[100];
+  static float theta[200];
   static int  nstop;
   static float xstop;
   static double dn;
   static float fn;
   static int  jj;
-  static float pi[100];
-  static float pi0[100], pi1[100];
+  static float pi[200];
+  static float pi0[200], pi1[200];
   static double dx;
   static int  nn;
   static float rn;
   static float ganisotmp;
   static int  rn1;
-  static float chi, mu[100], tau[100];
+  static float chi, mu[200], tau[200];
   static double psi;
   static int  nmx;
   static float chi0, chi1;
@@ -177,6 +169,7 @@ BHMie(float *X,
   nstop = xstop;
   ymod = Cabs(cy);
   nmx = (xstop > ymod) ? xstop : ymod + 14;
+  complex cd[nmx];
   dang = PI / (2 * (*Nang - 1));
 
   for (j = 0; j < *Nang; j++) {

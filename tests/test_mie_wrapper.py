@@ -1,4 +1,6 @@
 import unittest
+import os
+from pathlib import Path
 from pylisa.mie_wrapper import bh_mie, calc_qs
 
 import numpy as np
@@ -81,7 +83,7 @@ class TestMieWrapperXArray(unittest.TestCase):
         plt.xlabel("Size parameter, ka")
         plt.ylabel("Scattering Efficiency, Qsca")
         plt.legend()
-        plt.savefig("mie_plot.png")
+        plt.savefig(os.path.join(Path(__file__).resolve().parent, "mie_plot.png"))
         plt.close()
 
 if __name__ == "__main__":
