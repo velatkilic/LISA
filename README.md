@@ -15,11 +15,24 @@ of the scan lines under adverse weather arising from reduced SNR (signal to nois
 
 # Using LISA
 
-For original paper code look [here](/python_old/)
+For original paper code can be found [here](/python_old/). A faster version is currently being developed.
 
 ## Reference
-Cite as 
+Cite as
+```
+@article{kilic2021lidar,
+  title={Lidar light scattering augmentation (lisa): Physics-based simulation of adverse weather conditions for 3d object detection},
+  author={Kilic, Velat and Hegde, Deepti and Sindagi, Vishwanath and Cooper, A Brinton and Foster, Mark A and Patel, Vishal M},
+  journal={arXiv preprint arXiv:2107.07004},
+  year={2021}
+}
 
-[V. Kilic, D. Hegde, V. Sindagi, A.B. Cooper, M.A. Foster and V.M. Patel,
-"Lidar Light Scattering Augmentation (LISA): Physics-based Simulation of Adverse Weather Conditions for 3D Object Detection",
-arXiv:2107.07004, (2021).](https://arxiv.org/abs/2107.07004)
+@inproceedings{hegde2023source,
+  title={Source-free Unsupervised Domain Adaptation for 3D Object Detection in Adverse Weather},
+  author={Hegde, Deepti and Kilic, Velat and Sindagi, Vishwanath and Cooper, A Brinton and Foster, Mark and Patel, Vishal M},
+  booktitle={2023 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages={6973--6980},
+  year={2023},
+  organization={IEEE}
+}
+```
