@@ -7,7 +7,7 @@ out_dir: "/home/tagu/Work/data/tmp/datasets_deepen_cvproto_det3d_v3_train_val_sp
 # decide whether to visualize the results
 visualize: True
 
-# tranform coordinates by rotating and translating in orders, False means inverse transform is required and True means forward tranform
+# tranform coordinates by rotating and translating in orders, inverse means inverse operation is required and True means forward operation
 operations: 
   [
     ["/home/tagu/Work/data/tmp/poslv_flu_fix_to_vehicle.yaml", 'inverse'],

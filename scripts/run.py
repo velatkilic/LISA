@@ -4,10 +4,11 @@ import os
 import struct
 import yaml
 import numpy as np
-import atmos_models
 import argparse
 import cv_pb2
+import atmos_models
 from scipy.spatial.transform import Rotation as R
+
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -26,7 +27,7 @@ def parse_config(config_file):
 def parse_cvbin_paths(orignal_cvbin_path, out_dir):
     assert orignal_cvbin_path.endswith('.cvbin'), "This file does not ends with .cvbin"
     original_cvbin_name = orignal_cvbin_path.split('/')[-1]
-    rainy_cvbin_path = os.path.join(out_dir, original_cvbin_name[:-6] + "_rain" + original_cvbin_name[-6:])
+    rainy_cvbin_path = os.path.join(out_dir, original_cvbin_name[:-6] + "_augmented" + original_cvbin_name[-6:])
 
     return orignal_cvbin_path, rainy_cvbin_path
 

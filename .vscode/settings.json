@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./ta"
+        "./ta",
+        "./python_old"
     ]
 }
