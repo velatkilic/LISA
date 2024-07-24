@@ -1,0 +1,30 @@
+# path cvbin files
+cvbin_path: "/home/tagu/Work/data/tmp/datasets_deepen_cvproto_det3d_v3_train_val_split_v1_small_deepen_training_s0.5/scenes/20230418_1-ichikawa-to-chibakita_0000_0_000004.cvbin"
+
+# directory of output
+out_dir: "/home/tagu/Work/data/tmp/datasets_deepen_cvproto_det3d_v3_train_val_split_v1_small_deepen_training_s0.5/scenes/"
+
+# decide whether to visualize the results
+visualize: True
+
+# tranform coordinates by rotating and translating in orders, False means inverse transform is required and True means forward tranform
+operations: 
+  [
+    ["/home/tagu/Work/data/tmp/poslv_flu_fix_to_vehicle.yaml", 'inverse'],
+    ["/home/tagu/Work/data/tmp/poslv_flu_fix_to_left_anntena.yaml", 'forward'],
+    ["/home/tagu/Work/data/tmp/to_front_left_pandar128.yaml", 'forward']
+  ]
+
+# determine hyperparameters in LISA model
+lisa:
+  refractive_index_contrast: 1.328
+  wavelength: 905 # nm
+  max_lidar_range: 200 # m
+  min_lidar_range: 0.3 # m
+  beam_divergence_angle: 0.003 # rad
+  droplet_diameter_starting_point: 0.05 #mm
+  range_accuracy: 0.02 # m
+  use_saved_mie_coefficients: False # determine if use saved attenuation coefficients
+  atmospheric_model_type: 'rain'
+  lidar_return_mode: 'strongest'
+  rain_rate: 20 # mm/hr
